@@ -1,0 +1,9 @@
+# OS Junk Files
+.DS_Store
+Thumbs.db
+
+# Build & Temporary Files
+[Build]/
+[Temp]/
+[Logs]/
+*.log
