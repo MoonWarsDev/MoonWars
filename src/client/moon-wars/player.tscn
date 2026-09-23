@@ -1,19 +1,20 @@
 [gd_scene format=3 uid="uid://bpw0nfp2ap1ft"]
 
 [ext_resource type="Script" uid="uid://ca6rgc1xeuyra" path="res://player.gd" id="1_4flbx"]
+[ext_resource type="PackedScene" uid="uid://cxmocpqdeu5ds" path="res://Astronaut3.fbx" id="2_onrkg"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gqbx8"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_gqbx8"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_h2m0b"]
+radius = 0.1328125
+height = 0.7300682
 
 [node name="Player" type="CharacterBody3D" unique_id=1374958888]
 script = ExtResource("1_4flbx")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1387534524]
-shape = SubResource("CapsuleShape3D_gqbx8")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=134654568]
-mesh = SubResource("CapsuleMesh_gqbx8")
-
 [node name="Camera3D" type="Camera3D" parent="." unique_id=88560611]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.50187385, 0)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.0025465041, 0.70076877, 0.15574282)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1119721524]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.39235115, 0)
+shape = SubResource("CapsuleShape3D_h2m0b")
+
+[node name="Astronaut3" parent="." unique_id=155736003 instance=ExtResource("2_onrkg")]
